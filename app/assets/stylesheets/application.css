@@ -10,6 +10,17 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+ *= require_tree
  *= require_self
  */
+
+
+
+/* application.html.erb内でapplication.cssが読み込まれた後、 */
+ /* コメントアウトしているように見えるが、13行目の「*= require_tree」の記述でstylesheets内全てのcssが読み込まれている */
+
+
+
+ *{
+   box-sizing: border-box;          /* paddingなどでサイズが変わらないように設定 */
+ }
