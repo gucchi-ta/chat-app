@@ -1,6 +1,8 @@
 <div class = "side_bar_header" >
   <div class = "top_name">
-    <a href = "#" >Tom</a>
+    <%= link_to edit_user_path(current_user) do %>    <%# サイドバーからユーザー編集ページに遷移できるように、ビューファイルを編集 %>
+      <%= current_user.name %>                        <%# 表示されているユーザー名をログイン中のユーザー名にする %>
+    <% end %>
   </div>
   <div class = "create_chat">
     <a href = "#" >チャットを作成する</a>
