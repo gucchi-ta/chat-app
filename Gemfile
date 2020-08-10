@@ -54,7 +54,3 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
-
-
-rails g devise:install
-rails g devise:install
