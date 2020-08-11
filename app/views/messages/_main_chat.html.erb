@@ -11,7 +11,20 @@
   </div>
 </div>
  <div class="messages" >
-    <%= render partial: 'message', collection: @messages %>
+  <div class="message">
+    <div class="upper-message">
+      <div class="message_name" >Tom</div>
+      <div class="message_date">2020/3/31(wed) 12:43:30</div>
+    </div>
+    <div class="message_text">おはよう</div>
+  </div>
+  <div class="message">
+    <div class="upper-message">
+      <div class="message_name" >Tom</div>
+      <div class="message_date">2020/3/31(wed) 12:47:30</div>
+    </div>
+    <div class="message_text">こんばんは</div>
+  </div>
 </div>
 <%= form_with model: [@room, @message], html: {class: "form"}, local: true do |f|%>
   <div class="form-input">
