@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :name, presence: true       #バリデーションを設定
+  validates :name, presence: true       #空で登録できないようバリデーションを設定
   has_many :room_users
   has_many :romms, through: :room_users
 end
