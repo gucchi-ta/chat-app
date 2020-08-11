@@ -3,6 +3,9 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @room = Room.find(params[:room_id])
+    @messages = @room.messages.includes(:user)
+     # チャットルームに紐付いている全てのメッセージ : @room.messages
+     #全てのメッセージ情報に紐づくユーザー情報を、includes(:user)と記述をすることにより、ユーザー情報を1度のアクセスでまとめて取得することができる。
   end
 
   def create   #メッセージフォームから投稿した際にこのアクションを実行
@@ -13,8 +16,9 @@ class MessagesController < ApplicationController
     else
       render :index
     end
-
   end
+
+
 
   private
 
