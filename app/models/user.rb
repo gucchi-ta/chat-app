@@ -6,5 +6,5 @@ class User < ApplicationRecord
 
   validates :name, presence: true       #空で登録できないようバリデーションを設定
   has_many :room_users
-  has_many :romms, through: :room_users
+  has_many :rooms, through: :room_users
 end

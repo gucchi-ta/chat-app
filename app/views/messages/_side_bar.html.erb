@@ -5,18 +5,19 @@
     <% end %>
   </div>
   <div class = "create_chat">
-    <a href = "#" >チャットを作成する</a>
+    <%# <a href = 'rooms/new' >チャットを作成する</a> %>  <%# →これでもOK! %>
+    <%= link_to "チャットを作成する", new_room_path %>
   </div>
 </div>
 <div class = "rooms" >
   <div class = "room">
-    <div class = "room_name">
-      <a href = "#">techroom1</a>
-    </div>
-  </div>
-  <div class = "room">
-    <div class = "room_name">
-      <a href = "#">techroom2</a>
-    </div>
+  <%# サイドバー下部への新規作成したチャットルーム名の表示を実装 %>
+    <% current_user.rooms.each do |room|%>  
+      <div class="room">
+        <div class="room_name">
+           <a href="#"><%= room.name %></a>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>

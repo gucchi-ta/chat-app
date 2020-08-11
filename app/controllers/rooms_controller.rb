@@ -15,6 +15,6 @@ class RoomsController < ApplicationController
   private
 
   def room_params
-    params.require(:room).permit(:name, user_id: [])     #配列に対して保存を許可したい場合は、キーの名称と関連づけてバリューに[]と記述。
+    params.require(:room).permit(:name, user_ids: [])     #配列に対して保存を許可したい場合は、キーの名称と関連づけてバリューに[]と記述。
   end
 end
