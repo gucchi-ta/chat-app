@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :name, presence: true       #バリデーションを設定
+  has_many :room_users
+  has_many :romms, through: :room_users
 end
