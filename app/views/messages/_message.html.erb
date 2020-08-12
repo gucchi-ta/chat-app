@@ -14,10 +14,11 @@
     <!-- 投稿したメッセージ内容を記述する -->
       <%= message.content %>
     </div>
-    <%= image_tag message.image.variant(resize:'500×500'), class: 'message-image' if message.image.attached? %>
+    <%= image_tag message.image.variant(resize:'500x500'), class: 'message-image' if message.image.attached?%>
     <%# 「 image_tag message.image, class: 'message-image' 」で「画像の投稿」と「投稿した画像の表示」が可能となる。  %>
     <%# 「それ以降の記述で、画像が存在する場合のみimage_tagが読み込まれるようになる  %>
     <%# variantメソッド(「variant(resize:'500×500')」)はActive Storageを導入している場合に使用可能だが、ビュー側で使用したサイズをその都度指定できる。 %>
+    <%# 「x」は英字のx(エックス)の小文字 %>
   </div>
 </div>
 
